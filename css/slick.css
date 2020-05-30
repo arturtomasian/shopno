@@ -1,0 +1,140 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 100%;
+    padding: 50px;
+}
+
+
+/*Слайдер*/
+
+.slick-slider {}
+
+
+/*ограничивающая оболочка*/
+
+.slick-list {
+    overflow: hidden;
+}
+
+
+/*лента слайдов*/
+
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+/*слайд*/
+
+.slick-slide {}
+
+
+/*слайд активный*/
+
+.slick-slide.slick-active {}
+
+
+/*слайд основной*/
+
+.slick-slide.slick-current {}
+
+
+/*слайд по центру*/
+
+.slick-slide.slick-center {}
+
+
+/*стрелка*/
+
+.slick-arrow {}
+
+
+/*стрелка влево*/
+
+.slick-arrow.slick-prev {}
+
+
+/*стрелка вправо */
+
+.slick-arrow.slick-next {}
+
+
+/*стрелка не активная*/
+
+.slick-arrow.slick-disabled {}
+
+
+/*точки*/
+
+.slick-dots {}
+
+.slick-dots li {}
+
+.slick-dots button {}
+
+
+/*настройки для определенного слайдера (.about__slider-body u .about__slider-body)*/
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots li {
+    list-style: none;
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(112, 112, 114);
+}
+
+.slick-dots li.slick-active button {
+    background-color: cyan;
+}
+
+.what__content-body {
+    position: relative;
+}
+
+.what__content-body .slick-arrow {
+    position: absolute;
+    bottom: -13%;
+    z-index: 10;
+    font-size: 0;
+}
+
+.what__content-body .slick-arrow.slick-next {
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: url(/images/pravo.png) 50% 50% no-repeat white;
+}
+
+.what__content-body .slick-arrow.slick-next:hover {
+    background: url(/images/pravo.png) 50% 50% no-repeat cyan;
+}
+
+.what__content-body .slick-arrow.slick-prev {
+    right: 70px;
+    width: 50px;
+    height: 50px;
+    background: url(/images/levo.png) 50% 50% no-repeat white;
+}
+
+.what__content-body .slick-arrow.slick-prev:hover {
+    background: url(/images/levo.png) 50% 50% no-repeat cyan;
+}

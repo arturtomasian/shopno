@@ -1,0 +1,620 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    padding-top: 30px;
+    z-index: 1;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+section,
+footer {
+    padding: 110px 0;
+}
+
+.section-shopno {
+    background-color: #eff0f2;
+}
+
+.section-about,
+.section-service,
+.section-what {
+    background-color: #f8fafa;
+}
+
+div[class*="text"],
+.container>div,
+.footer,
+.nav,
+.nav__list,
+.team__overrow-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div[class*="text"],
+.team__overrow-body {
+    align-items: flex-start;
+}
+
+div[class*="text"] h3,
+.nav__link {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Merriweather Sans', sans-serif;
+    margin-bottom: 10px;
+}
+
+div[class*="text"] p,
+.footer p,
+.footer__svg {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 10px;
+}
+
+.nav,
+.nav__list,
+.container>div.message {
+    flex-direction: row;
+}
+
+.nav {
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.nav__logo {
+    flex-shrink: 8;
+}
+
+.nav__list {
+    flex-shrink: 10;
+    flex-wrap: wrap;
+}
+
+.nav__list.active {
+    flex-grow: 1;
+}
+
+.nav__item {
+    transition: transform 1s;
+    transform: scale(0);
+    width: max-content;
+    margin: 0 auto 10px;
+    padding: 0 3px;
+    background-color: rgba(124, 230, 212, 0.623);
+    border-radius: 10px;
+}
+
+.nav__list.active .nav__item {
+    transform: scale(1);
+}
+
+.nav__item:hover {
+    background-color: rgba(177, 167, 167, 0.9);
+}
+
+.nav__burger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav__burger:before,
+.nav__burger:after,
+.nav__burger span {
+    content: "";
+    background-color: black;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: red;
+}
+
+.nav__burger:after {
+    top: 0;
+}
+
+.nav__burger.active:after,
+.nav__burger.active:before {
+    transform: rotate(-45deg);
+    top: 9px;
+    background-color: rgb(25, 226, 25);
+}
+
+.nav__burger.active:before {
+    transform: rotate(45deg);
+}
+
+.nav__burger span {
+    top: 9px;
+}
+
+.nav__burger.active span {
+    transform: scale(0);
+}
+
+.container>.shopno {
+    min-height: 690px;
+    justify-content: space-evenly;
+}
+
+div [class*="title"] {
+    text-align: center;
+    max-width: 615px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+div [class*="title"] p {
+    font-size: 18px;
+}
+
+div [class="shopno__title"] {
+    max-width: 975px;
+    font-weight: bold;
+}
+
+div [class*="__body"],
+.message {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.shopno__title h1,
+.shopno__title h2 {
+    position: relative;
+}
+
+.shopno__title h1:after,
+.shopno__title h2:before {
+    content: "";
+    width: 240px;
+    height: 40px;
+    background-color: rgba(64, 224, 208, 0.37);
+    display: inline-block;
+    transform: translate(-90%, 15%);
+    position: absolute;
+}
+
+.shopno__title h2:before {
+    width: 210px;
+    transform: translate(-10%, 15%);
+}
+
+.shopno__contact {
+    border: 1px solid black;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 400px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.shopno__contact:hover {
+    text-shadow: 4px 4px 4px black;
+    background-color: turquoise;
+}
+
+.about {
+    min-height: 745px;
+}
+
+.about__slider-body,
+.about__text-body {
+    max-width: 485px;
+}
+
+.about__slider-body {
+    min-width: 0;
+}
+
+.about__text-body {
+    min-height: 420px;
+}
+
+.work {
+    min-height: 900px;
+}
+
+div [class*="-body"] {
+    margin: 0 auto 15px auto;
+}
+
+.work__img-body {
+    max-width: 370px;
+    max-height: 360px;
+}
+
+.service {
+    min-height: 1370px;
+}
+
+.service__img-body {
+    max-width: 470px;
+    width: 100%;
+    max-height: 370px;
+    background-color: black;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.service__img-body:nth-child(n-4) {
+    max-height: 420px;
+}
+
+.service__img-body:nth-child(3n),
+.service__img-body:first-child {
+    max-width: 650px;
+}
+
+.service__font {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.438);
+    color: rgba(255, 255, 255, 0.616);
+    overflow: auto;
+    transition: 1s;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.service__font.active {
+    transform: translateY(-100%);
+}
+
+.service__text {
+    max-width: 315px;
+    overflow: auto;
+    margin-bottom: 10px;
+    min-height: 112px;
+}
+
+.service__btn {
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.service__btn:hover {
+    color: cornflowerblue;
+}
+
+.service__font--green {
+    background-color: rgba(64, 224, 208, 0.658);
+    transform: translateY(100%);
+    color: black;
+}
+
+.service__font--green.active {
+    transform: translateY(0);
+}
+
+.team {
+    min-height: 1075px;
+}
+
+.team__img-body {
+    max-width: 375px;
+    max-height: 440px;
+    position: relative;
+    cursor: pointer;
+}
+
+.team__overrow-body {
+    position: absolute;
+    max-width: 330px;
+    height: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: auto;
+    background-color: cyan;
+    left: 0;
+    right: 0;
+    left: 0;
+    bottom: -10px;
+    margin: auto;
+    transform: scale(0);
+    transition: 1s;
+}
+
+.team__img-body img:hover {
+    filter: blur(1px) sepia(20%);
+}
+
+.team__overrow-body.active {
+    transform: scale(1);
+}
+
+.team__text-body {
+    max-height: 115px;
+    max-width: 240px;
+}
+
+.team__text-body h3 span {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(255, 99, 71, 0.6);
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: none;
+}
+
+.team__icons-body {
+    max-width: 240px;
+    width: 100%;
+}
+
+.team__icons-body img {
+    margin-right: 10px;
+}
+
+.what {
+    min-height: 690px;
+}
+
+.what__slider-body {
+    max-width: 330px;
+    max-height: 430px;
+    min-width: 0;
+}
+
+.what__content-body {
+    padding: 10px;
+    text-align: center;
+    background-color: #eaebed;
+    max-width: 670px;
+    min-width: 0;
+    width: 100%;
+    min-height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.what__text-body {
+    max-width: 500px;
+    min-height: 300px;
+    align-items: center;
+}
+
+.rating input.rating__input:checked~label.rating-item svg polygon {
+    fill: gold;
+    stroke: gold;
+}
+
+.rating input.rating__input {
+    display: none;
+}
+
+.rating {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rating label.rating-item:hover svg polygon,
+.rating label.rating-item:hover~label.rating-item svg polygon {
+    fill: gold;
+    stroke: gold;
+}
+
+.logos__img {
+    filter: grayscale(1);
+}
+
+.logos__img:hover {
+    filter: grayscale(0);
+}
+
+.section-message {
+    background: url(/images/message.jpg) center / cover no-repeat;
+}
+
+.message {
+    min-height: 470px;
+}
+
+.message__form-body,
+.message__adress-body {
+    max-width: 615px;
+    width: 100%;
+    min-height: 460px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+}
+
+.message__adress-body {
+    max-width: 500px;
+}
+
+.form,
+.form__input,
+.form__label,
+h6 {
+    width: 100%;
+    font-family: "Raleway";
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    color: white;
+}
+
+h6 {
+    color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+.form__group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form__input {
+    padding-bottom: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.form__input:focus {
+    border-bottom: 2px solid rgba(29, 31, 29, 0.445);
+}
+
+.form__input:focus~.form__label,
+.form__input:not(:placeholder-shown)~.form__label {
+    top: -12px;
+    font-size: 12px;
+}
+
+.form__label {
+    border: none;
+    background-color: initial;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+textarea {
+    min-height: 85px;
+}
+
+.form button {
+    width: 240px;
+    height: 55px;
+    background-color: cyan;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.form button:focus,
+.form button:hover {
+    opacity: 0.7;
+}
+
+.form {
+    border: none;
+}
+
+.message__map,
+.message__contact {
+    max-width: 450px;
+    width: 100%;
+    min-height: 220px;
+    margin: 0 auto;
+}
+
+.message__contact {
+    letter-spacing: 2px;
+    min-height: 160px;
+}
+
+.message__contact h6:nth-child(4) {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #191919;
+    color: #d4d5d5;
+    text-align: center;
+}
+
+.footer__svg {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.footer__svg h4 {
+    margin-bottom: 10px;
+}
+
+.foter__img {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background-color: #3f4244;
+}
+
+.foter__img:hover {
+    background-color: cyan;
+}
+
+.foter__img img {
+    display: block;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.foter__img:nth-child(2) img,
+.foter__img:nth-child(5) img {
+    filter: invert(100%);
+}
+
+.foter__img:hover img {
+    filter: invert(100%);
+}
+
+.foter__img:nth-child(2):hover img,
+.foter__img:nth-child(5):hover img {
+    filter: none;
+}
+
+.footer p {
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
